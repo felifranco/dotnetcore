@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio de sesión";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido</h1>    
+</div>
+<div>
+    <div class="container border" style="padding: 20px;">
+        <form method="post">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="credential.User"></label>
+                </div>
+                <div class="col-5">
+                    <input type="text" asp-for="credential.User" id="user" class="form-control"/>
+                </div>
+                <span class="text-danger" asp-validation-for="credential.User"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="credential.Password"></label>
+                </div>
+                <div class="col-5">
+                    <input type="password" asp-for="credential.Password" id="pass" class="form-control"/>
+                </div>
+                <span class="text-danger" asp-validation-for="credential.Password"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <input type="submit" class="btn btn-primary" value="Login" id="Login">
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
